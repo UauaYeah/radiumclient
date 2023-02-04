@@ -1,5 +1,6 @@
 body {
     font-family:'Roobert';
+
 }
 
 @font-face {
@@ -11,6 +12,7 @@ body {
 .text {
     position: relative;
     color: #fff;
+    white-space: nowrap;
 }
 
 .btn1 {
@@ -24,8 +26,7 @@ body {
     top: 50%;
     transform: translateX(-50%);
     margin-top: 410px;
-    width: 140px;
-    height: 60px;
+    padding: 20px 20px;
     color: #FFF;
     transition: 0.3s ease-in-out;
     font-weight: 600;
