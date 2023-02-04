@@ -1,0 +1,62 @@
+body {
+    font-family:'Roobert';
+}
+
+@font-face {
+    font-family: "Roobert";
+    src: url("Roobert-Regular.ttf");
+
+}
+
+.text {
+    position: relative;
+    color: #fff;
+}
+
+.btn1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    margin-top: 410px;
+    width: 140px;
+    height: 60px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background-color:rgb(114, 137, 218);
+    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+}
+.text a:hover {
+    background: rgb(114, 137, 258);
+}
+
+.text h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0 0 12px;
+    font-size: 40px;
+
+    transform: translateX(-50%);
+    margin-top: 280px;
+}
+
+.text h2 {
+    position:  absolute;
+    left: 50%;
+    top:50%;
+    white-space: nowrap;
+    font-size: 13.5px;
+    transform: translateX(-50%);
+    margin-top: 365px;
+}
