@@ -126,7 +126,7 @@ body {
         margin-left: 0;
         white-space: nowrap;
         font-size: 15px;
-        transform: translateX(-50%);
+        transform: translateX(-53.5%);
         margin-top: 365px;
     }
 
@@ -135,6 +135,7 @@ body {
         margin-left: 5px;
         white-space: nowrap;
         font-size: 15px;
+        transform: translateX(-55%);
         margin-top: 385px;
     }
 }
