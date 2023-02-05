@@ -10,7 +10,7 @@ body {
 
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 5550px) {
     .text {
         position: relative;
         color: #fff;
