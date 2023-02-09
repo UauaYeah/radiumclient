@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="description" content="Welcome to Radium Client!">
     <meta content="Radium Client" property="og:title" />
-    <meta content="Radium Client is Minecraft Bedrock Edition Packet V2 and Horion-based client, supporting 1.18.12." property="og:description" />
+    <meta content="Radium Client is Minecraft Bedrock Edution Packet V2 and Horion-based client, supporting 1.18.12."
+        property="og:description" />
     <meta content="https://radiumclient.com" property="og:url" />
     <meta content="https://cdn.discordapp.com/attachments/1064470103019765790/1071450998696058900/radium.png"
         property="og:image" />
     <title>Radium Client</title>
-    <link rel="shortcut icon" type="image/x-icon" href="radium.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,8 +20,71 @@
         <h1>Radium Client</h1>
         <h2 class="iti">Radium Client is Minecraft Bedrock Edition Packet V2</h2>
         <h2 class="ni"> and Horion-based client, supporting 1.18.12.</h2>
-        <a href="https://discord.com/invite/auau1234" class="btn1">Download & Discord</a>
+        <a href="https://discord.gg/uqHP6tzUPb" class="btn1" target="_blank">Downoad & Discord</a>
     </div>
+
+    <header>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <!--ここからメニュー-->
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="#">メニューリンク1</a>
+                    </li>
+                    <li>
+                        <a href="#">メニューリンク2</a>
+                    </li>
+                    <li>
+                        <a href="#">メニューリンク3</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ここまでメニュー-->
+        </div>
+    </header>
+
+    <div class="faqs">
+        <div class="txt">
+            <h1>FAQ</h1>
+            <h3>FREQUENTLY ASKED QUESTIONS</h3>
+            <hr noshade>
+        </div>
+        <div class="faq">
+            <h3 class="question">Q. How do I get Radium Client?</h3>
+            <div class="answer">
+                <a href="https://discord.gg/uqHP6tzUPb" target="_blank">click here</a>
+            </div>
+        </div>
+        <div class="faq">
+            <h3 class="question">Q. daily kissho omae!!</h3>
+            <div class="answer">
+                <p>sinesinesine</p>
+            </div>
+        </div>
+        <div class="faq">
+            <h3 class="question">Q. sineyo.</h3>
+            <div class="answer">
+                <p>bokega!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Radium Client
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', function () {
+                this.classList.toggle('open');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
