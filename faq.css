@@ -1,0 +1,754 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roobert';
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #FFF;
+}
+
+@font-face {
+    font-family: "Roobert";
+    src: url("Roobert-Regular.ttf");
+}
+
+@font-face {
+    font-family: "cf";
+    src: url("GreycliffCF-Regular.woff2")
+}
+
+/* inspired from this svgbackgrounds.com/ */
+.button {
+    width: fit-content;
+    display: flex;
+    padding: 0.6em 1.1em;
+    gap: 0.4rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background: linear-gradient(15deg, #880088, #aa2068, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa2068, #880088) no-repeat;
+    background-size: 300%;
+    background-position: left center;
+    transition: background .3s ease;
+    color: #fff;
+}
+
+.button:hover {
+    background-size: 320%;
+    background-position: right center;
+}
+
+.button:hover svg {
+    fill: #fff;
+}
+
+.button svg {
+    width: 23px;
+    fill: #f09f33;
+    transition: .3s ease;
+}
+
+.faqs .txt h1,
+.txt h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.faqs .txt h1 {
+    display: flex;
+    font-size: 2.7rem;
+}
+
+.faqs {
+    font-family: "cf";
+}
+
+.answer2 {
+    font-size: 15px;
+    animation: ani12 0.5s forwards;
+    margin-left: 10px;
+}
+
+@keyframes ani12 {
+    from {
+        max-height: 125px;
+        opacity: 1;
+        overflow: visible;
+    }
+
+    to {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+
+.question.open+.answer2 {
+    overflow: visible;
+    animation: ani22 0.5s forwards;
+}
+
+@keyframes ani22 {
+    from {
+        max-height: 0px;
+        opacity: 0;
+        min-height: 0px;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 125px;
+        min-height: 125px;
+    }
+}
+
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #FFF;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.li2 {
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+}
+
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.9;
+    left: 100%;
+    z-index: 80;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-content ul {
+    padding: 90px 10px 0;
+}
+
+.menu-content ul li {
+    border-bottom: solid 1px #000;
+    max-width: 17rem;
+    list-style: none;
+}
+
+#menu-btn-check:checked~.menu-content {
+    left: 80%;
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    background-color: #000;
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    background-color: #000;
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+
+@media (max-width: 5550px) {
+    .text {
+        position: relative;
+        color: #fff;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn1 {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 240px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        margin-top: 410px;
+        padding: 25px 35px;
+        color: #FFF;
+        transition: 0.3s ease-in-out;
+        font-weight: 600;
+        background-color: rgb(114, 137, 218);
+        border-radius: 8px;
+    }
+
+
+
+    .footer {
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        margin-top: 200px;
+        transform: translateX(-50%);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .text a:hover {
+        background: rgb(114, 137, 258);
+    }
+
+    .text h1 {
+        position: absolute;
+        left: 50%;
+        margin: 0 0 12px;
+        font-size: 40px;
+
+        transform: translateX(-50%);
+        margin-top: 280px;
+    }
+
+    .faqs {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        min-width: 500px;
+        max-height: 10px;
+        transform: translateX(-50%);
+        margin-top: 950px;
+    }
+
+    .faqs a {
+        text-decoration: underline;
+    }
+
+    .faq {
+        display: block;
+        max-width: 500px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .question {
+        padding: 1px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #FFF;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+        /*メニューオープン時は真ん中の線を透明にする*/
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        opacity: 0.9;
+        left: 100%;
+        z-index: 80;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-content ul {
+        padding: 90px 10px 0;
+    }
+
+    .menu-content ul li {
+        border-bottom: solid 1px #000;
+        max-width: 17rem;
+        list-style: none;
+    }
+
+    #menu-btn-check:checked~.menu-content {
+        left: 80%;
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        background-color: #000;
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        background-color: #000;
+    }
+
+    #menu-btn-check {
+        display: none;
+    }
+
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: #000;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+
+    .menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #000;
+        border-right: solid 2px #000;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+
+    .answer {
+        font-size: 15px;
+        animation: ani2 0.5s forwards;
+        margin-left: 10px;
+    }
+
+    @keyframes ani2 {
+        from {
+            max-height: 35px;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        to {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .question.open+.answer {
+        overflow: visible;
+        animation: ani 0.5s forwards;
+    }
+
+    @keyframes ani {
+        from {
+            max-height: 0px;
+            opacity: 0;
+            min-height: 0px;
+        }
+
+        to {
+            opacity: 1;
+            max-height: 35px;
+            min-height: 35px;
+        }
+    }
+
+    .answer2 {
+        font-size: 15px;
+        animation: ani12 0.5s forwards;
+        margin-left: 10px;
+    }
+
+    @keyframes ani12 {
+        from {
+            max-height: 125px;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        to {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .question.open+.answer2 {
+        overflow: visible;
+        animation: ani22 0.5s forwards;
+    }
+
+    @keyframes ani22 {
+        from {
+            max-height: 0px;
+            opacity: 0;
+            min-height: 0px;
+        }
+
+        to {
+            opacity: 1;
+            max-height: 125px;
+            min-height: 125px;
+        }
+    }
+
+    .text .iti {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        white-space: nowrap;
+        font-size: 13.5px;
+        margin-left: -140px;
+        transform: translateX(-50%);
+        margin-top: 365px;
+    }
+
+    .text .ni {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        white-space: nowrap;
+        font-size: 13.5px;
+        margin-left: 155px;
+        transform: translateX(-50%);
+        margin-top: 365px;
+    }
+}
+
+@media (max-width: 640px) {
+    .text {
+        position: relative;
+        color: #fff;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .btn1 {
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 240px;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        margin-top: 430px;
+        padding: 20px 20px;
+        color: #FFF;
+        transition: 0.3s ease-in-out;
+        background-color: rgb(114, 137, 255);
+        border-radius: 8px;
+    }
+
+    .footer {
+        position: absolute;
+        top: 200%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #FFF;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked~.menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+        /*メニューオープン時は真ん中の線を透明にする*/
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+
+    .menu-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        opacity: 0.9;
+        left: 100%;
+        z-index: 80;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-content ul {
+        padding: 90px 10px 0;
+    }
+
+    .menu-content ul li {
+        border-bottom: solid 1px #000;
+        max-width: 17rem;
+        list-style: none;
+    }
+
+    #menu-btn-check:checked~.menu-content {
+        left: 25%;
+    }
+
+    #menu-btn-check:checked~.menu-btn span::after {
+        background-color: #000;
+    }
+
+    #menu-btn-check:checked~.menu-btn span::before {
+        background-color: #000;
+    }
+
+    #menu-btn-check {
+        display: none;
+    }
+
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: #000;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+
+    .menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #000;
+        border-right: solid 2px #000;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+
+    .faqs {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 50%;
+        min-width: 300px;
+        max-height: 10px;
+        transform: translateX(-50%);
+        margin-top: 950px;
+    }
+
+    .faq {
+        display: block;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #000;
+    }
+
+    .answer2 {
+        font-size: 15px;
+        animation: ani12 0.5s forwards;
+        margin-left: 10px;
+    }
+
+    @keyframes ani12 {
+        from {
+            max-height: 135px;
+            opacity: 1;
+            overflow: visible;
+        }
+
+        to {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+
+    .question.open+.answer2 {
+        overflow: visible;
+        animation: ani22 0.5s forwards;
+    }
+
+    @keyframes ani22 {
+        from {
+            max-height: 0px;
+            opacity: 0;
+            min-height: 0px;
+        }
+
+        to {
+            opacity: 1;
+            max-height: 135px;
+            min-height: 135px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .text a:hover {
+        background: rgb(114, 137, 258);
+    }
+
+    .text h1 {
+        position: absolute;
+        margin-top: 60%;
+        font-size: 40px;
+    }
+
+    .text .iti {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: 0;
+        white-space: nowrap;
+        font-size: 15px;
+        transform: translateX(-48.5%);
+        margin-top: 365px;
+    }
+
+    .text .ni {
+        position: absolute;
+        margin-left: 5px;
+        white-space: nowrap;
+        font-size: 15px;
+        transform: translateX(-55%);
+        margin-top: 385px;
+    }
+}
