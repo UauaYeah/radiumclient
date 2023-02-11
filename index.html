@@ -1,94 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Welcome to Radium Client!">
-    <meta content="Radium Client" property="og:title" />
-    <meta content="Radium Client is Minecraft Bedrock Edution Packet V2 and Horion-based client, supporting 1.18.12."
-        property="og:description" />
-    <meta content="https://radiumclient.com" property="og:url" />
-    <meta content="https://cdn.discordapp.com/attachments/1064470103019765790/1071450998696058900/radium.png"
-        property="og:image" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css.css">
     <title>Radium Client</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="radium.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
+<body>
+    <div class="container">
 
-<body background="b1.png">
-    <div class="text">
-        <h1>Radium Client</h1>
-        <h2 class="iti">Radium Client is Minecraft Bedrock Edition Packet V2</h2>
-        <h2 class="ni"> and Horion-based client, supporting 1.18.12.</h2>
-        <a href="https://discord.gg/uqHP6tzUPb" class="btn1" target="_blank">Downoad & Discord</a>
-    </div>
-
-    <header>
-        <div class="hamburger-menu">
-            <input type="checkbox" id="menu-btn-check">
-            <label for="menu-btn-check" class="menu-btn"><span></span></label>
-            <!--ここからメニュー-->
-            <div class="menu-content">
-                <ul>
-                    <li>
-                        <a href="#">Coming soon...</a>
-                    </li>
-                    <li>
-                        <a href="#">Coming soon...</a>
-                    </li>
-                    <li>
-                        <a href="#">Coming soon...</a>
-                    </li>
-                </ul>
-            </div>
-            <!--ここまでメニュー-->
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="assets/images/Video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>Radium Client</h1>
+            <a href="https://discord.gg/uqHP6tzUPb">Download Client</a>
+            <a href="/faq.html">FAQ Section</a>
+            <a href="/japaneese.html">Japaneese Mode</a>
+            <br>
+            <br>
+            <p>A Minecraft: Free Bedrock Edition utility mod.</p>
+            <p>Credit ❤️ As_pw , AntiBanCheat</p>
+            <p>Site By TrashBox#9999</p>
         </div>
-    </header>
-
-    <div class="faqs">
-        <div class="txt">
-            <h1>FAQ</h1>
-            <h3>FREQUENTLY ASKED QUESTIONS</h3>
-            <hr noshade>
-        </div>
-        <div class="faq">
-            <h3 class="question">Q. How do I get Radium Client?</h3>
-            <div class="answer">
-                <a href="https://discord.gg/uqHP6tzUPb" target="_blank">click here</a>
-            </div>
-        </div>
-        <div class="faq">
-            <h3 class="question">Q. What version does it works on?</h3>
-            <div class="answer">
-                <p>It works on 1.18.12</p>
-            </div>
-        </div>
-        <div class="faq">
-            <h3 class="question">Q. How to downgrade 1.18.12?</h3>
-            <div class="answer2">
-                <a href="https://cdn.discordapp.com/attachments/1033060846814904410/1073236821259067432/MCLauncher.zip" style="text-decoration: none;color: #000;">1. Install MCLauncher(click here to download)</a>
-                <p>2. Run MCLauncher.exe as administrator</p>
-                <p>3. Find 1.18.12.1 and click Download</p>
-                <p>4. Run Minecraft-1.18.12.1.Appx and install</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        Radium Client
-    </div>
-
-    <script>
-        const questions = document.querySelectorAll('.question');
-
-        questions.forEach(question => {
-            question.addEventListener('click', function () {
-                this.classList.toggle('open');
-            });
-        });
-
-    </script>
 </body>
-
-</html>
+</html> 
